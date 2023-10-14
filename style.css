@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Lexend+Deca:wght@400;700&family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca:wght@400;700&family=Open+Sans:wght@300&display=swap');
+:root{
+    --mainBG:hsl(233,47%,7%);
+    --cardBG:hsl(244,38%, 16%);
+    --accent:hsl(277, 88%, 43%);
+
+    --white:hsl(0, 0%, 100%);
+    --mainparagraph:hsla(0, 0%, 100%, 0.75);
+    --statHeadings: hsla(0, 0%, 100%, 0.6);
+
+    --primaryfontfamily:'Inter',sans-serif;
+    --secondaryfontfamily:'Lexend Deca',sans-serif;
+    --fontsize:1rem;
+
+    
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+
+}
+body{
+    font-family: var(--primaryfontfamily);
+    font-size: var(--fontsize);
+    font-weight: 400;
+    color: var(--white);
+    background-color: var(--mainBG); 
+}
+.stat-card{
+    width: 70vw;
+    height: 50vh;
+    background-color: var(--cardBG);
+    border-radius: 7px;
+    margin: 15rem;
+}
+.stat-card-infos{
+    padding: 2rem;
+}
+.stat-card-infos span{
+    color: var(--accent);
+}
+.stat-card-infos h1{
+    width: 40%;
+
+  
+}
+.stat-card-infos p{
+    width: 40%;
+    padding-top: 1rem;
+    font-family: var(--primaryfontfamily);
+    font-size: 15px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.stats{
+    padding: 2rem;
+    top: 20%;
+    display: flex;
+    justify-content: space-between;
+    width:40%;
+
+}
+.stat-card-img{
+    background-image: url(./images/image-header-desktop.jpg);
+    width: 35%;
+    height: 50%;
+    position: absolute;
+    top: 32.5%; 
+    left: 53%;
+    overflow: hidden;
+    /* background-color: var(--accent); */
+   
+}
+.image{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    opacity: 0.4;
+    background-color: var(--accent);
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+.stat p{
+    font-family: var(--primaryfontfamily);
+    font-size: 12px;
+    padding-top: 0.3rem;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.stat h2{
+    font-size: 20px;
+}
