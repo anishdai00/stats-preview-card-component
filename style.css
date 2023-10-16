@@ -68,8 +68,8 @@ body{
     width: 35%;
     height: 50%;
     position: absolute;
-    top: 32.5%; 
-    left: 53%;
+    top: 34%; 
+    left: 55%;
     overflow: hidden;
     /* background-color: var(--accent); */
    
@@ -93,3 +93,4 @@ body{
 .stat h2{
     font-size: 20px;
 }
+
