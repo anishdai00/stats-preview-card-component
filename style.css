@@ -1,96 +1,103 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&family=Lexend+Deca:wght@400;700&family=Open+Sans:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca:wght@400;700&family=Open+Sans:wght@300&display=swap');
-:root{
-    --mainBG:hsl(233,47%,7%);
-    --cardBG:hsl(244,38%, 16%);
-    --accent:hsl(277, 88%, 43%);
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Lexend+Deca:wght@400;700&family=Open+Sans:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca:wght@400;700&family=Open+Sans:wght@300&display=swap");
+:root {
+  /* colors */
+  --mainBG: hsl(233, 47%, 7%);
+  --cardBG: hsl(244, 38%, 16%);
+  --accent: hsl(277, 88%, 43%);
 
-    --white:hsl(0, 0%, 100%);
-    --mainparagraph:hsla(0, 0%, 100%, 0.75);
-    --statHeadings: hsla(0, 0%, 100%, 0.6);
+  --white: hsl(0, 0%, 100%);
+  --mainparagraph: hsla(0, 0%, 100%, 0.75);
+  --statHeadings: hsla(0, 0%, 100%, 0.6);
 
-    --primaryfontfamily:'Inter',sans-serif;
-    --secondaryfontfamily:'Lexend Deca',sans-serif;
-    --fontsize:1rem;
-
-    
-}
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-
-}
-body{
-    font-family: var(--primaryfontfamily);
-    font-size: var(--fontsize);
-    font-weight: 400;
-    color: var(--white);
-    background-color: var(--mainBG); 
-}
-.stat-card{
-    width: 70vw;
-    height: 50vh;
-    background-color: var(--cardBG);
-    border-radius: 7px;
-    margin: 15rem;
-}
-.stat-card-infos{
-    padding: 2rem;
-}
-.stat-card-infos span{
-    color: var(--accent);
-}
-.stat-card-infos h1{
-    width: 40%;
-
-  
-}
-.stat-card-infos p{
-    width: 40%;
-    padding-top: 1rem;
-    font-family: var(--primaryfontfamily);
-    font-size: 15px;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-}
-.stats{
-    padding: 2rem;
-    top: 20%;
-    display: flex;
-    justify-content: space-between;
-    width:40%;
-
-}
-.stat-card-img{
-    background-image: url(./images/image-header-desktop.jpg);
-    width: 35%;
-    height: 50%;
-    position: absolute;
-    top: 34%; 
-    left: 55%;
-    overflow: hidden;
-    /* background-color: var(--accent); */
-   
-}
-.image{
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-    opacity: 0.4;
-    background-color: var(--accent);
-    background-repeat: no-repeat;
-    z-index: -1;
-}
-.stat p{
-    font-family: var(--primaryfontfamily);
-    font-size: 12px;
-    padding-top: 0.3rem;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-}
-.stat h2{
-    font-size: 20px;
+  /* fonts */
+  --primaryfontfamily: "Inter", sans-serif;
+  --secondaryfontfamily: "Lexend Deca", sans-serif;
+  --fontsize: 1rem;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+body {
+  /* We center the main box using flex */
+  height: 100vh; /* vh (100% viewportHeight)*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: var(--primaryfontfamily);
+  font-size: var(--fontsize);
+  font-weight: 400;
+  color: var(--white);
+  background-color: var(--mainBG);
+}
+
+/* /////// description /////// */
+.preview-card {
+  width: 70vw;
+  max-width: 1110px;
+  min-width: 700px;
+  height: auto; /* I recommend using automatic height, determined by the content */
+  display: flex;
+  background-color: var(--cardBG);
+  border-radius: 7px;
+}
+.preview-card__description {
+  flex-grow: 1;
+  flex-basis: 50%;
+  padding: 4.5rem 5rem 4.5rem 4.5rem; /* It's better to add padding to the parent to create 
+  space between the child elements and the borders */
+}
+
+/* /////// header /////// */
+.preview-card__title {
+  font-size: 2.25rem;
+  line-height: 2.75rem;
+}
+.preview-card__title-highlight {
+  color: var(--accent);
+}
+.preview-card__paragraph {
+  max-width: 374px;
+  margin-top: 25px;
+  font-family: var(--primaryfontfamily);
+  font-size: 15px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  line-height: 25px;
+}
+
+/* /////// stats /////// */
+.preview-card__stats {
+  margin-top: 4.5rem;
+  top: 20%;
+  display: flex;
+  justify-content: space-between;
+}
+.preview-card__stat-title {
+  font-family: var(--primaryfontfamily);
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.preview-card__stat-txt {
+  font-size: 12px;
+}
+
+/* /////// image /////// */
+.preview-card__img-container {
+  flex-grow: 1;
+  flex-basis: 50%;
+  background-color: var(--accent);
+}
+.preview-card__img {
+  width: 100%;
+  height: 100%;
+  background: url(./images/image-header-desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  mix-blend-mode: multiply;
+  opacity: 0.75;
+}
